@@ -855,7 +855,7 @@ public class PostDAOImpl implements PostDAO{
     sql.append("        where p1.post_id=u1.rid and u1.code = 'B0102' ");
     sql.append("        and to_date(?) < to_date(ad_end_day) ");
     sql.append("     ) t1 ");
-    sql.append("where t1.no <5 ");
+    sql.append("where t1.no <7 ");
 
     List<PromotionHome> list = jt.query(sql.toString(), new BeanPropertyRowMapper<>(PromotionHome.class), date);
 
